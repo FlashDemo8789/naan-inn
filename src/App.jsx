@@ -4,7 +4,7 @@ import {
   Star,
   MapPin,
   Phone,
-  Mail,
+  ExternalLink,
   ChevronDown,
   Menu as MenuIcon,
   X,
@@ -179,14 +179,13 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <p className="text-[#D4AF37] uppercase tracking-[0.4em] text-sm mb-6">
-            A Kobe Landmark • Est. 1986
+            Halal Pakistani &amp; Indian • Sannomiya, Kobe
           </p>
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-white mb-8 tracking-tighter">
             NAAN INN
           </h1>
           <p className="text-gray-300 max-w-lg mx-auto font-light leading-relaxed mb-12">
-            A historic culinary destination serving authentic North Indian &
-            Pakistani flavors near Shin-Kobe Station for nearly four decades.
+            Authentic Pakistani and Indian curry, a short walk from Sannomiya Station in Kobe.
           </p>
 
           <div className="flex gap-6 justify-center">
@@ -295,49 +294,49 @@ const Story = () => {
 const MenuSection = () => {
   const lunchMenu = [
     {
-      title: "Friday Buffet Special",
-      price: "¥1,980",
-      desc: "Our legendary all-you-can-eat authentic Pakistani buffet. (Fridays Only)",
+      title: "Friday Halal Lunch Buffet",
+      price: "Lunch ¥1,000–¥1,999",
+      desc: "On Fridays, lunch is served as a Halal buffet (Muslim guests).",
       image: IMAGES.buffet,
     },
     {
-      title: "Special Lunch Set B",
-      price: "¥1,400",
-      desc: "2 Curries, Tandoori Chicken, Salad, Samosa, Naan, Rice & Drink.",
+      title: "Chicken Biryani & Pakora",
+      price: "Lunch ¥1,000–¥1,999",
+      desc: "A classic combo featured in Tabelog photos.",
       image: IMAGES.lunchSet,
     },
     {
-      title: "Daily Lunch Set A",
-      price: "¥1,000",
-      desc: "Choice of Curry (Chicken/Mutton/Veg), Naan, Salad & Drink.",
+      title: "Curry & Naan",
+      price: "Lunch ¥1,000–¥1,999",
+      desc: "Comforting curry with fresh naan.",
       image: IMAGES.curry,
     },
   ];
 
   const dinnerMenu = [
     {
-      title: "Halal Kobe Beef Steak",
-      price: "Market Price",
-      desc: "Premium A5 Hyogo Tajima beef, served Teppan style. (Reserve in advance)",
-      image: IMAGES.steak,
-    },
-    {
-      title: "Tandoori Mix Grill",
-      price: "¥2,800",
-      desc: "Assortment of Tandoori Chicken, Seekh Kabab, and Chicken Tikka.",
-      image: IMAGES.tandoori,
-    },
-    {
-      title: "Mutton Masala",
-      price: "¥1,350",
-      desc: "Succulent mutton cooked in a thick, spicy tomato-based gravy.",
+      title: "Curry Trio Plate",
+      price: "Dinner ¥2,000–¥2,999",
+      desc: "A three-curry selection (as seen on Tabelog).",
       image: IMAGES.lunchSet,
     },
     {
-      title: "Palak Paneer",
-      price: "¥1,250",
-      desc: "Homemade cottage cheese in a smooth, creamed spinach sauce.",
+      title: "Masala (3 Types)",
+      price: "Dinner ¥2,000–¥2,999",
+      desc: "Bold masala varieties highlighted in Tabelog photos.",
+      image: IMAGES.tandoori,
+    },
+    {
+      title: "Vegetarian Options",
+      price: "Ask in-store",
+      desc: "Vegetarian dishes are available.",
       image: IMAGES.palak,
+    },
+    {
+      title: "Wine & Cocktails",
+      price: "Ask in-store",
+      desc: "Wine and cocktails are available.",
+      image: IMAGES.interior,
     },
   ];
 
@@ -345,10 +344,12 @@ const MenuSection = () => {
     <section id="menu" className="py-24 bg-[#0A0A0A] relative border-t border-white/5">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[#D4AF37] uppercase tracking-widest text-xs">
-            Authentic Flavors
-          </span>
-          <h2 className="font-serif text-4xl text-white mt-4">The Collection</h2>
+          <span className="text-[#D4AF37] uppercase tracking-widest text-xs">Menu Highlights</span>
+          <h2 className="font-serif text-4xl text-white mt-4">From the Kitchen</h2>
+          <p className="text-gray-500 text-sm mt-4 max-w-2xl mx-auto font-light">
+            Highlights based on the restaurant&apos;s public listing and photos. For the latest menu and pricing,
+            please check Tabelog.
+          </p>
         </div>
 
         {/* LUNCH */}
@@ -429,9 +430,14 @@ const MenuSection = () => {
         </div>
 
         <div className="text-center mt-20">
-          <button className="border border-white/20 text-white px-10 py-4 uppercase tracking-[0.2em] text-xs hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-300">
-            Download Full Menu
-          </button>
+          <a
+            href="https://tabelog.com/en/hyogo/A2801/A280101/28000464/dtlmenu/photo/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block border border-white/20 text-white px-10 py-4 uppercase tracking-[0.2em] text-xs hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-300"
+          >
+            View Menu Photos (Tabelog)
+          </a>
         </div>
       </div>
     </section>
@@ -534,7 +540,7 @@ const Reservation = () => {
         <div className="flex flex-col justify-center p-12 md:p-24 bg-[#0F0F0F]">
           <div className="mb-12">
             <h2 className="font-serif text-4xl text-white mb-4">Secure Your Table</h2>
-            <p className="text-gray-400 font-light">Join us for a historic meal near Shin-Kobe.</p>
+            <p className="text-gray-400 font-light">Join us for a meal near Sannomiya Station.</p>
           </div>
 
           <form className="space-y-8">
@@ -589,6 +595,18 @@ const Reservation = () => {
             <button className="w-full bg-[#D4AF37] text-black py-4 uppercase tracking-[0.3em] font-bold text-sm hover:bg-white transition-colors mt-8">
               Confirm Booking
             </button>
+            <p className="text-xs text-gray-600 mt-4">
+              Prefer booking online?{" "}
+              <a
+                className="text-gray-300 hover:text-white underline underline-offset-2"
+                href="https://tabelog.com/en/hyogo/A2801/A280101/28000464/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Reserve via Tabelog
+              </a>
+              .
+            </p>
           </form>
         </div>
       </div>
@@ -605,7 +623,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="font-serif text-2xl text-white tracking-widest">NAAN INN</h3>
             <p className="text-gray-500 text-sm leading-relaxed">
-              The original Halal dining experience in Kobe. Serving authentic cuisine with warmth and tradition since 1986.
+              Pakistani &amp; Indian curry in Kobe&apos;s Chuo Ward, a short walk from Sannomiya Station.
             </p>
             <div className="flex justify-center md:justify-start gap-4 text-gray-400">
               <Instagram size={20} className="hover:text-[#D4AF37] cursor-pointer" />
@@ -618,13 +636,21 @@ const Footer = () => {
             <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <MapPin size={16} /> 4-1-8 Kano-cho, Chuo-ku, Kobe
+                <MapPin size={16} /> 兵庫県神戸市中央区山本通3-1-2 谷口ビル 1F
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Phone size={16} /> 078-242-8771
+                <Phone size={16} /> 078-262-1508
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Mail size={16} /> info@naaninn.com
+                <ExternalLink size={16} />
+                <a
+                  href="https://tabelog.com/en/hyogo/A2801/A280101/28000464/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white underline underline-offset-2"
+                >
+                  Tabelog listing
+                </a>
               </li>
             </ul>
           </div>
@@ -633,25 +659,22 @@ const Footer = () => {
             <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Hours</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex justify-between max-w-[200px] mx-auto md:mx-0">
-                <span>Dinner</span> <span>17:00 - 22:00</span>
+                <span>Daily</span> <span>11:00 - 22:00</span>
               </li>
-              <li className="flex justify-between max-w-[200px] mx-auto md:mx-0">
-                <span>Lunch</span> <span>11:00 - 14:30</span>
+              <li className="text-xs text-gray-600 mt-4">
+                Fridays: lunch is served as a Halal buffet (Muslim guests).
               </li>
-              <li className="text-xs text-gray-600 mt-4">Open Daily</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Newsletter</h4>
-            <div className="flex border-b border-white/20 pb-2">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="bg-transparent outline-none text-white w-full text-sm placeholder-gray-700"
-              />
-              <button className="text-gray-400 hover:text-white text-xs uppercase">Join</button>
-            </div>
+            <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Notes</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li>Reservations: available</li>
+              <li>Seats: 29</li>
+              <li>Non-smoking</li>
+              <li>Payment: no cards / e-money / QR</li>
+            </ul>
           </div>
         </div>
 
