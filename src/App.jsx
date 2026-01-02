@@ -655,19 +655,42 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-          <p>&copy; 2024 Naan Inn Kobe. All Rights Reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white">
-              Credits
-            </a>
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+            <p>&copy; 2024 Naan Inn Kobe. All Rights Reserved.</p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <a href="#" className="hover:text-white">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-white">
+                Terms
+              </a>
+              <a href="#" className="hover:text-white">
+                Credits
+              </a>
+            </div>
           </div>
+          <p className="mt-4 text-[10px] text-gray-600">
+            Hero video:{" "}
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Jalebi_being_prepared,_Bangalore.webm"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white underline underline-offset-2"
+            >
+              Jalebi being prepared, Bangalore
+            </a>{" "}
+            by{" "}
+            <a
+              href="https://commons.wikimedia.org/wiki/User:Psubhashish"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white underline underline-offset-2"
+            >
+              Subhashish Panigrahi
+            </a>{" "}
+            (CC BY-SA 3.0).
+          </p>
         </div>
       </div>
     </footer>
