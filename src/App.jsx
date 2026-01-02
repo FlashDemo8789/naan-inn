@@ -4,6 +4,7 @@ import {
   Star,
   MapPin,
   Phone,
+  Mail,
   ExternalLink,
   ChevronDown,
   Menu as MenuIcon,
@@ -240,13 +241,19 @@ const Story = () => {
               generations.
             </p>
             <p className="text-gray-400 leading-8 mb-8 font-light">
-              We take pride in our special Halal courses, bridging the luxury of
-              Hyogo&apos;s finest beef with traditional Indian tandoor techniques.
+              In a simple, casual dining room with tables of all sizes, we serve
+              Pakistani classics like curry and biryani using halal ingredients.
             </p>
 
             <div className="mt-8 border-l-2 border-[#D4AF37] pl-6">
               <p className="text-white font-serif text-lg italic tracking-wide">
                 &quot;Where the ancient spice of the Silk Road meets the modern spirit of Kobe.&quot;
+              </p>
+            </div>
+
+            <div className="mt-10 bg-black/30 border border-white/10 p-6">
+              <p className="text-gray-300 text-sm leading-7">
+                大小テーブル席が並ぶシンプルでカジュアルな佇まいの店内で、カレーやビリヤニなどのパキスタン料理を提供する。ハラール食材を使用。
               </p>
             </div>
           </motion.div>
@@ -295,19 +302,19 @@ const MenuSection = () => {
   const lunchMenu = [
     {
       title: "Friday Halal Lunch Buffet",
-      price: "Lunch ¥1,000–¥1,999",
+      price: "¥1,000–2,000",
       desc: "On Fridays, lunch is served as a Halal buffet (Muslim guests).",
       image: IMAGES.buffet,
     },
     {
       title: "Chicken Biryani & Pakora",
-      price: "Lunch ¥1,000–¥1,999",
+      price: "¥1,000–2,000",
       desc: "A classic combo featured in Tabelog photos.",
       image: IMAGES.lunchSet,
     },
     {
       title: "Curry & Naan",
-      price: "Lunch ¥1,000–¥1,999",
+      price: "¥1,000–2,000",
       desc: "Comforting curry with fresh naan.",
       image: IMAGES.curry,
     },
@@ -316,13 +323,13 @@ const MenuSection = () => {
   const dinnerMenu = [
     {
       title: "Curry Trio Plate",
-      price: "Dinner ¥2,000–¥2,999",
+      price: "¥1,000–2,000",
       desc: "A three-curry selection (as seen on Tabelog).",
       image: IMAGES.lunchSet,
     },
     {
       title: "Masala (3 Types)",
-      price: "Dinner ¥2,000–¥2,999",
+      price: "¥1,000–2,000",
       desc: "Bold masala varieties highlighted in Tabelog photos.",
       image: IMAGES.tandoori,
     },
@@ -636,10 +643,19 @@ const Footer = () => {
             <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <MapPin size={16} /> 兵庫県神戸市中央区山本通3-1-2 谷口ビル 1F
+                <MapPin size={16} /> 〒650-0003 兵庫県神戸市中央区山本通３丁目１−２ 谷口ビル 1Ｆ
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone size={16} /> 078-242-8771
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <Mail size={16} />
+                <a
+                  href="mailto:info@naan.jp"
+                  className="hover:text-white underline underline-offset-2"
+                >
+                  info@naan.jp
+                </a>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <ExternalLink size={16} />
@@ -659,10 +675,7 @@ const Footer = () => {
             <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Hours</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex justify-between max-w-[200px] mx-auto md:mx-0">
-                <span>Daily</span> <span>11:00 - 22:00</span>
-              </li>
-              <li className="text-xs text-gray-600 mt-4">
-                Fridays: lunch is served as a Halal buffet (Muslim guests).
+                <span>Daily</span> <span>11:30 - 22:00</span>
               </li>
             </ul>
           </div>
@@ -670,10 +683,8 @@ const Footer = () => {
           <div>
             <h4 className="text-[#D4AF37] uppercase text-xs tracking-widest mb-6">Notes</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Reservations: available</li>
-              <li>Seats: 29</li>
-              <li>Non-smoking</li>
-              <li>Payment: no cards / e-money / QR</li>
+              <li>1 人あたりの料金: ￥1,000～2,000</li>
+              <li>ハラール食材を使用</li>
             </ul>
           </div>
         </div>
