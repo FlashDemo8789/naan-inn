@@ -639,7 +639,7 @@ const Footer = () => {
                 <MapPin size={16} /> 兵庫県神戸市中央区山本通3-1-2 谷口ビル 1F
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Phone size={16} /> 078-262-1508
+                <Phone size={16} /> 078-242-8771
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <ExternalLink size={16} />
